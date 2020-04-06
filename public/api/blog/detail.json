@@ -1,0 +1,7 @@
+{
+  "success": true,
+  "data": {
+    "title": "聊一聊React中的虚拟DOM",
+    "content": "当不使用异步组件时，所有的组件内容都会一起加载到 `bundle.js`  中，不管你用没用到，这样会导致 `bundle.js` 文件很大，而且加载速度比较慢，尤其当组件很多时。"
+  }
+}

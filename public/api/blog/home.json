@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "topicList": [{
+      "id": 1,
+      "title": "社会热点",
+      "imgUrl": "https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg"
+    },{
+      "id": 2,
+      "title": "手绘",
+      "imgUrl": "https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg"
+    }],
+    "articleList": [{
+      "id": 1,
+      "title": "别以为看字就是读书，深阅读，才能撬动你的灵魂！",
+      "abstract": "文/俊英子 一月，我从一个二手平台买了一些书，当翻到《深阅读》的一刹那我就停下了，第一次见到透明的，类似磨砂的书皮！从外观上来看是我见过最有艺术...",
+      "imgUrl": "https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg"
+    },{
+      "id": 2,
+      "title": "别以为看字就是读书，深阅读，才能撬动你的灵魂！",
+      "abstract": "文/俊英子 一月，我从一个二手平台买了一些书，当翻到《深阅读》的一刹那我就停下了，第一次见到透明的，类似磨砂的书皮！从外观上来看是我见过最有艺术...",
+      "imgUrl": "https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg"
+    }],
+    "recommendList": [{
+      "id": 1,
+      "imgUrl": "//cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+    },{
+      "id": 2,
+      "imgUrl": "//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
+    }]
+  }
+}
