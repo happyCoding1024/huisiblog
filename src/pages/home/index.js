@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import Topic from './components/Topic';
 import List from './components/List';
 import Create from './components/Create';
-import Recommend from './components/Recommend';
 import Writer from './components/Writer';
 import Music from './components/Music';
 import { connect } from 'react-redux';

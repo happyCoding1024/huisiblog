@@ -14,7 +14,7 @@ class Music extends PureComponent {
   }
 
   componentDidMount() {
-    const ap = new APlayer({
+    new APlayer({
       element: document.getElementById('player'),
       narrow: false,
       autoplay: false,          
