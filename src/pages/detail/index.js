@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import DOMPurify from 'dompurify';
+import SimpleMDEReact from "react-simplemde-editor";
+import "easymde/dist/easymde.min.css";
 import { actionCreators } from './store';
 import {
   DetailWrapper,
@@ -17,11 +18,6 @@ import { withRouter } from 'react-router-dom';
 class Detail extends PureComponent {
   render() { 
     const { title, content } = this.props;
-    var showdown  = require('showdown');
-    var    converter = new showdown.Converter();
-    var    text      = content;
-    var    html      = converter.makeHtml(text);
-    console.log(this.props);
     return (
       <DetailWrapper>
         <DetailLeft>
@@ -38,7 +34,12 @@ class Detail extends PureComponent {
               {title}
             </ArticleTitle>
             <Content >    
-              <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(html)}}></div>
+              <div className="container container-narrow">
+                <SimpleMDEReact
+                  className={""}
+                  value={content}
+                />
+              </div>
             </Content>
           </ArticleContent>
         </DetailLeft>
@@ -49,7 +50,6 @@ class Detail extends PureComponent {
   }
 
   componentDidMount() {
-    console.log(this.props)
     this.props.getDetail(this.props.match.params.id);
   }
 
