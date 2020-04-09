@@ -4,15 +4,26 @@ import { Redirect } from 'react-router-dom';
 import SimpleMDEReact from "react-simplemde-editor";
 import "easymde/dist/easymde.min.css";
 import { actionCreators } from './store';
-import { WriteWrapper, WriteHeader } from './style.js';
+import { WriteWrapper, WriteHeader, Publish, Title } from './style.js';
 
 class Write extends PureComponent {
   render() {
-    const { loginStatus, textValue, handleChange } = this.props; 
+    const { loginStatus, textValue, titleValue, handleChange, handleArticlePublish, handleTitleChange } = this.props; 
     if (loginStatus) {
       return (
         <WriteWrapper>
           <WriteHeader>
+            <Publish 
+              className='publish'
+              onClick = {() => {handleArticlePublish(titleValue, textValue)}}
+            >
+              发表文章
+            </Publish>
+            <Title 
+              value={titleValue}
+              onChange={handleTitleChange}
+            >
+            </Title>
             <div className="container container-narrow">
               <SimpleMDEReact
                 className={""}
@@ -32,12 +43,19 @@ class Write extends PureComponent {
 
 const mapStateToProps = (state) => ({
   textValue: state.getIn(['writer', 'textValue']),
+  titleValue: state.getIn(['writer', 'titleValue']),
   loginStatus: state.getIn(['login', 'loginStatus'])
 });
 
 const mapDispatchToProps = (dispatch) => ({
   handleChange(value) {
     dispatch(actionCreators.changeValue(value))
+  },
+  handleTitleChange(e) {
+    dispatch(actionCreators.changeTitleValue(e.target.value))
+  },
+  handleArticlePublish(title, content) {
+    dispatch(actionCreators.articlePublish(title, content))
   }
 }) 
 
