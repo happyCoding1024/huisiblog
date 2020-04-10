@@ -30,15 +30,6 @@ export const HomeRight = styled.div`
   width: 300px;
   margin: 20px 5px 0 0;
   float: right;
-  .ant-picker-calendar {
-    background: #fffcfc;
-    border-radius: 4px;
-    box-shadow: 0 0 5px 0 #ccc;
-    margin-top: 5px;
-  }
-  .ant-picker-body {
-    background: #fffcfc;
-  }
 `;
 
 // Topic组件
@@ -133,10 +124,10 @@ export const LoadMore = styled.div`
 
 // Create组件
 export const CreateWrapper = styled.div`
+  border: 1px solid #ccc;
   background: #fffcfc;
   overflow: hidden;
   border-radius: 6px;
-  box-shadow: 0 0 4px 0 #ccc;
 `;
 
 export const CreateHeader = styled.div`

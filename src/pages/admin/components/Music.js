@@ -22,7 +22,6 @@ class Music extends PureComponent {
       listFolded: true,
       listMaxHeight: 10,
       volume: 0.2,
-      fixed: true,
       mutex: true,
       theme: 'rgb(255, 252, 252)',      
       music: [{
