@@ -2,7 +2,7 @@
 ### 介绍
 慧思博客_前端是学习 React 过程中做的一个简化的博客系统，现在只实现了博客系统的部分功能。本人是一个 React 初学者，此项目适合于初学 React 的同学上手。这是此博客项目的前端部分，后端部分用原生Node编写，实现的功能前后端已经调试通过。
 慧思博客主页
-![慧思博客项目主页](https://images.cnblogs.com/cnblogs_com/zhangguicheng/1682690/o_200410070834%E6%85%A7%E6%80%9D%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A1%B5_900_400Github%E7%94%A8.png)
+![慧思博客项目主页](https://images.cnblogs.com/cnblogs_com/zhangguicheng/1682690/o_200410070834慧思博客主页_900_400Github用.png)
 
 ### 技术栈
 
