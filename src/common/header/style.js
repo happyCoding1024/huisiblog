@@ -43,6 +43,28 @@ export const NavItem = styled.div`
     float: right; 
     color: #969696;
   }
+  &.register {
+    display: none;
+  }
+  .ant-menu-horizontal > .ant-menu-submenu-selected {
+    border-bottom: none;
+    color: #fffcfc;
+  }
+  .ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    vertical-align: bottom;
+    border-bottom: 2px solid transparent;
+    background: #fffcfc;
+    height: 39px;
+  }
+  .writerImg {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 `;
 
 export const SearchWrapper = styled.div`

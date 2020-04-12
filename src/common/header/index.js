@@ -18,11 +18,14 @@ import { actionCreators } from './store';
 import { actionCreators as loginActionCreators } from '../../pages/login/store';
 // 引入 antd 的样式文件
 import 'antd/dist/antd.css';
+import { Menu } from 'antd';
+import {  } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 class Header extends PureComponent {
   render() {
-    const { focused, mouseIn, list, logout, loginStatus, handleInputFocus, handleInputBlur } = this.props;
+    const { focused, mouseIn, list, logout, loginStatus, handleInputFocus, handleInputBlur, registerStatus } = this.props;
+    const { SubMenu } = Menu;
     return (
       <HeaderWrapper>
         <Nav>
@@ -31,13 +34,48 @@ class Header extends PureComponent {
           </Link>
           <NavItem className='left'>首页</NavItem>
           <NavItem className='left'>推荐</NavItem>
+          {/* 注意在JSX的大括号中写的要是JS表达式，不能是JS语句 */}
+          { registerStatus || loginStatus ? (
+                <NavItem className='right register'>
+                <i className="iconfont">&#xe6b3;</i>
+                <Link to='/register'>注册</Link>
+                </NavItem>
+              )
+            : (
+              <NavItem className='right'>
+              <i className="iconfont">&#xe6b3;</i>
+              <Link to='/register'>注册</Link>
+              </NavItem>
+            )
+          } 
           <NavItem className='right'>
-            <i className="iconfont">&#xe6b3;</i>
-            注册
-          </NavItem>
-          <NavItem className='right'>
-            <i className="iconfont">&#xe60f;</i>
-            { loginStatus ? <span onClick={logout}>退出</span> : <Link to='/login'>登录</Link> }
+            {/* <i className="iconfont">&#xe60f;</i> */}
+            { loginStatus ? (
+                <Menu  mode="horizontal">
+                  <SubMenu
+                    title={
+                      <span className="submenu-title-wrapper">
+                        <img className='writerImg' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg' />
+                      </span>
+                    }
+                  >
+                    <Menu.Item key="setting:1"><Link to='/admin'>个人主页</Link></Menu.Item>
+                    <Menu.Item key="setting:2" onClick={logout}>退出</Menu.Item>
+                    {/* <Menu.ItemGroup title="个人主页">
+                      <Link to='/admin'></Link>
+                    </Menu.ItemGroup>
+                      <Menu.Item key="setting:1">Option 1</Menu.Item>
+                      <Menu.Item key="setting:2">Option 2</Menu.Item>
+                    <Menu.ItemGroup onClick={logout} title="退出"> */}
+                      {/* <Menu.Item key="setting:3">Option 3</Menu.Item>
+                      <Menu.Item key="setting:4">Option 4</Menu.Item> */}
+                    {/* </Menu.ItemGroup> */}
+                  </SubMenu>
+                </Menu>
+              )
+              : 
+              <Link to='/login'>登录</Link> 
+            }
           </NavItem>
             <SearchWrapper>
               <CSSTransition  
@@ -99,12 +137,12 @@ class Header extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-  focused: state.getIn(['header', 'focused']),
+  focused: state.getIn(['header', 'focused']), // 等价于 state.get('header').get('focused')
   list: state.getIn(['header', 'list']),
   page: state.getIn(['header', 'page']),
   mouseIn: state.getIn(['header', 'mouseIn']),
-  loginStatus: state.getIn(['login', 'loginStatus'])
-  // 等价于 state.get('header').get('focused')
+  loginStatus: state.getIn(['login', 'loginStatus']),
+  registerStatus: state.getIn(['register', 'registerStatus'])
 });
 
 const mapDispatchToProps = (dispatch) => ({
