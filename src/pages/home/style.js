@@ -19,7 +19,7 @@ export const HomeLeft = styled.div`
   width: 625px;
   margin-left: 13px;
   margin-top: 20px;
-  .banner-img {
+  .KdbNav {
     width: 625px;
     height: 240px;
     vertical-align: bottom;
@@ -39,13 +39,25 @@ export const HomeRight = styled.div`
   .ant-picker-body {
     background: #fffcfc;
   }
+  .CarouselImg {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 4px 0 #ccc;
+  }
 `;
 
 // Topic组件
 export const TopicWrapper = styled.div`
-  padding: 20px 0 10px 0;
+  padding: 6px 0 10px 0;
   overflow: hidden;
-  margin-left: -18px;
+  box-shadow: 0 0 4px 0 #ccc;
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 6px;
+  }
 `;
 
 export const TopicItem = styled.div`

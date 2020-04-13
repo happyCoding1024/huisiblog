@@ -213,3 +213,34 @@ export const MusicWrapper = styled.div`
   }
 `;
 
+export const AuthorHeader = styled.div`
+  overflow: hidden;
+  padding: 24px;
+  .writerImg {
+    float: left;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+`;
+
+export const Writer = styled.div`
+  position: relative;
+  margin-left: 50px;
+  .name {
+    padding-top: 2px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .jieshao {
+    padding-top: 5px;
+    display: inline-block;
+    font-size: 14px;
+    color: #ccc;
+  }
+`;
+
+
+

@@ -10,6 +10,7 @@ class Topic extends PureComponent {
     const { topicList } = this.props;
     return (
       <TopicWrapper>
+        <h1>文章标签</h1>
         {
           topicList.map((item) => (
             <TopicItem key={item.get('id')}>

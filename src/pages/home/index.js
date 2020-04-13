@@ -9,6 +9,7 @@ import { actionCreators } from './store';
 import 'antd/dist/antd.css';
 import { Calendar, Select, Radio, Col, Row, Typography } from 'antd';
 import { Carousel } from 'antd';
+import KbdNav from '../../common/kbdNav/kbdNav';
 import { 
   HomeWrapper,
   HomeLeft,
@@ -23,25 +24,34 @@ class Home extends PureComponent {
     return (
       <HomeWrapper className='clearFloat'>
         <HomeLeft>
-          <Carousel effect="fade" autoplay>
-            <div>
-              <h3><img className='banner-img' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg' /></h3>
-            </div>
-            <div>
-              <h3><img className='banner-img' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg' /></h3>
-            </div>
-            <div>
-              <h3><img className='banner-img' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg' /></h3>
-            </div>
-            <div>
-              <h3><img className='banner-img' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg' /></h3>
-            </div>
-          </Carousel>
+          <KbdNav className='KbdNav' />
           <Topic /> 
           <List />
         </HomeLeft>
         <HomeRight>
           <Create />
+          <Carousel effect="fade" autoplay>
+            <div>
+              <h3>
+                <img  className='CarouselImg' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg'></img>
+              </h3>
+            </div>
+            <div>
+              <h3>
+              <img className='CarouselImg' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg'></img>
+              </h3>
+            </div>
+            <div>
+              <h3>
+              <img className='CarouselImg' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg'></img>
+              </h3>
+            </div>
+            <div>
+              <h3>
+              <img className='CarouselImg' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg'></img>
+              </h3>
+            </div>
+          </Carousel>
           <Calendar
             fullscreen={false}
             headerRender={({ value, type, onChange, onTypeChange }) => {

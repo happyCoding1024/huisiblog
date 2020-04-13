@@ -2,10 +2,12 @@ import React, { PureComponent } from 'react';
 import Topic from './components/Topic';
 import List from './components/List';
 import Create from './components/Create';
-import Writer from './components/Writer';
+import Author from './components/Author';
 import Music from './components/Music';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
+import { Redirect } from 'react-router-dom';
+import KbdNav from '../../common/kbdNav/kbdNav';              
 import { 
   HomeWrapper,
   HomeLeft,
@@ -16,25 +18,28 @@ import {
 class Admin extends PureComponent {
   
   render() {
-    const { showScroll } = this.props;
-    return (
-      <HomeWrapper className='clearFloat'>
-        <HomeLeft>
-          <img className='banner-img' alt='' src='https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg' />
-          <Topic /> 
-          <List />
-        </HomeLeft>
-        <HomeRight>
-          <Create />
-          {/* <Recommend /> */}
-          <Music />
-          <Writer />
-        </HomeRight>
-        {
-          showScroll ? <BackTop onClick={this.handleScrollTop}><i className='iconfont'>&#xe60c;</i></BackTop> : null
-        }
-      </HomeWrapper>
-    )
+    const { showScroll, loginStatus } = this.props;
+      if (loginStatus) {
+        return (
+          <HomeWrapper className='clearFloat'>
+            <HomeLeft>
+              <KbdNav className='KbdNav' />
+              <Topic /> 
+              <List />
+            </HomeLeft>
+            <HomeRight>
+              <Author />
+              <Create />
+              <Music />
+            </HomeRight>
+            {
+              showScroll ? <BackTop onClick={this.handleScrollTop}><i className='iconfont'>&#xe60c;</i></BackTop> : null
+            }
+        </HomeWrapper>
+        )
+      } else {
+        return <Redirect to='/login' />
+      }
   }
 
   componentDidMount() {
@@ -56,7 +61,8 @@ class Admin extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-  showScroll: state.getIn(['home', 'showScroll'])
+  showScroll: state.getIn(['home', 'showScroll']),
+  loginStatus: state.getIn(['login', 'loginStatus'])
 });
 
 const mapDispatchToProps = (dispatch) => ({

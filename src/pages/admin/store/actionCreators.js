@@ -15,7 +15,7 @@ const getMoreListAction = (result, otherPage) => ({
 
 export const changeHomeDataAction = () => {
   return (dispatch) => {
-    axios.get('/api/blog/list').then((res) => {
+    axios.get('/api/blog/list.json').then((res) => {
       const result = res.data.data;
       dispatch(changeHomeData(result));
     });
