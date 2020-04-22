@@ -98,7 +98,7 @@
 
 ## UpdateLog & IssueLog
 
-[updateIssueLog](doc/dev/UpdateIssueLog.md)
+[updateIssueLog](doc/dev/updateIssueLog.md)
 
 
 
