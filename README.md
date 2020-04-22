@@ -2,9 +2,8 @@
 
 ## 介绍
 
-慧思博客_前端是学习 React 过程中做的一个简化的博客系统，现在只实现了博客系统的部分功能。
+慧思博客_前端是学习 React 过程中做的一个简化的博客系统，后端使用 Node 编写，实现的功能前后端已经进行了联调测试。
 
-此项目适合于初学 React 的同学上手，这是此博客项目的前端部分，后端部分用原生Node编写，实现的功能前后端已经调试通过。
 
 慧思博客主页(2020.04.09)
 
@@ -12,38 +11,33 @@
 
 ## 项目运行
 
-### 前端(只能展示部分功能)
+### 前端
+
+> 只能展示部分功能，因为需要用到后端的数据
 
 1）将 huisiblog 仓库 clone 到本地
 
-```git
-git clone git@github.com:happyCoding1024/huisiblog.git
-```
+2）进入 huisiblog 目录打开命令行窗口，运行 `npm install` 安装依赖。（注意命令行窗口的地址必须是 huisiblog 目录，window 用户在进入 huisiblog 目录后，按住 shift 右键在弹出的对话框中选择在此处打开命令行窗口即可）
 
-3）进入 huisiblog 目录打开命令行窗口，运行 `npm install` 安装依赖。（注意命令行窗口的地址必须是 huisiblog 目录，window 用户在进入 huisiblog 目录后，按住 shift 右键在弹出的对话框中选择在此处打开命令行窗口即可）
-
-2）依赖安装完成后，接着运行 `npm run start` 即可。
+3）依赖安装完成后，接着运行 `npm run start` 即可。
 
 ### 前后端联调
 
 1）将 huisiblog 和 huisi_node 两个仓库 clone 到本地
 
-```git 
-git clone git@github.com:happyCoding1024/huisiblog.git
-git clone git@github.com:happyCoding1024/huisi_node.git
-```
+2）进入 huisiblog 目录打开命令行窗口，运行 `npm install` 安装依赖。
 
-进入 huisiblog 目录运行打开命令行运行 `npm run start`，进入 huisi_node 目录按住 shift 点击鼠标右键选择在此处打开命令行窗口运行 `npm run dev`。（注意命令行中的地址必须是这两个目录）
+3）进入 huisi_node 目录按住 shift 点击鼠标右键选择在此处打开命令行窗口运行 `npm run start` 
 
-2）启动 Redis
+4）启动 Redis
 
 进入 huisiblog/public/Redis 目录按住 shift 点击鼠标右键选择在此处打开命令行窗口，运行 `redis-server`（注：我的电脑是 win7 64bit，如果不能正常运行可参考  [Redis安装使用教程](https://www.runoob.com/redis/redis-install.html) 自行安装）
 
-3）启动 nginx
+5）启动 nginx
 
 进入 huisiblog/public/nginx 目录按住 shift 点击鼠标右键选择在此处打开命令行窗口，然后运行 `nginx` 即可）
 
-4）启动 MySQL
+6）启动 MySQL
 
 如果没有安装 MySQL，可以参考 [MySQL安装使用教程]( https://blog.csdn.net/bobo553443/article/details/81383194 ) 自行安装，安装完 MySQL 之后再安装 MySQL workbench。打开 MySQL workbench 之后，点击如图所示的加号建立连接。
 
@@ -55,7 +49,11 @@ git clone git@github.com:happyCoding1024/huisi_node.git
 
 然后再点击 OK 即可。
 
-5）最后，在浏览器中输入 localhost:8080 即可展示博客主页。
+8）进入 huisi_node 目录打开命令行窗口，运行 `npm install` 安装依赖。
+
+9）进入 huisi_node 目录按住 shift 点击鼠标右键选择在此处打开命令行窗口运行 `npm run dev`
+
+10）最后，在浏览器中输入 localhost:8080 即可展示博客主页。
 
 ## 技术栈
 
@@ -77,19 +75,18 @@ git clone git@github.com:happyCoding1024/huisi_node.git
 
 ## 功能描述
 
-### 已完成功能
-
 - [x] 登录，注册（只支持用户名和密码这种简单的方式）
 - [x] 新增博客（支持 Markdown）
 - [x] 个人主页
 - [x] 文章列表
 - [x] 文章详情
-- [x] 删除博客（后端已实现）
-- [x] 更新博客（后端已实现）
+- [x] 删除博客
+- [x] 更新博客
 - [x] 音乐播放
 - [x] 键盘导航
+- [x] 回到顶部
 
-### 未完成功能
+## TodoList
 
 - [ ] 点赞，评论
 - [ ] 留言
@@ -98,6 +95,10 @@ git clone git@github.com:happyCoding1024/huisi_node.git
 - [ ] 文章分类
 - [ ] 分页显示
 - [ ] ...
+
+## UpdateLog
+
+[updateLog](doc/dev/UpdateLog.md)
 
 
 
