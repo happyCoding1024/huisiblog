@@ -96,9 +96,9 @@
 - [ ] 分页显示
 - [ ] ...
 
-## UpdateLog
+## UpdateLog & IssueLog
 
-[updateLog](doc/dev/UpdateLog.md)
+[updateIssueLog](doc/dev/UpdateIssueLog.md)
 
 
 
