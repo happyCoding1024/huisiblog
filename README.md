@@ -7,7 +7,7 @@
 
 慧思博客主页(2020.04.09)
 
-![慧思博客项目主页](https://images.cnblogs.com/cnblogs_com/zhangguicheng/1682690/o_200410070834慧思博客主页_900_400Github用.png)
+![慧思博客项目主页](https://raw.githubusercontent.com/happyCoding1024/image-hosting/master/img/Github慧思博客主页照片900_400.png)
 
 ## 项目运行
 
