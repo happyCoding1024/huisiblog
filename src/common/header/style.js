@@ -3,20 +3,25 @@ import logoPic from '../../static/huisiLogo2.png';
 // import { Input } from 'antd';
 
 export const HeaderWrapper = styled.div`
-  z-index: 1;
-  position: relative;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 52px;
+  border-bottom: 1px solid #f0f0f0;
+  background-image: linear-gradient(to right, #fff8f8 0%, #fffeef 50%,#fbfdff 70%, #f5f4f9 100%);
 `;
 
 export const Nav = styled.div`
-  width: 960px;
-  margin: 0 auto; // 水平居中
+  width: 1190px;
+  margin: 0 80px;
   padding： 0 50px;
+  height: 52px;
   box-sizing: border-box;
   background: rgb(255, 252, 252);
   display: flow-root; // 清除浮动
   border-bottom: 1px solid #f0f0f0;
-  box-shadow:0 0  3px 0 #eee;
+  background-image: linear-gradient(to right, #fff8f8 0%, #fffeef 50%,#fbfdff 70%, #f5f4f9 100%);
 `;
 
 export const Logo = styled.div`
@@ -34,7 +39,7 @@ export const NavItem = styled.div`
   line-height: 52px;
   padding: 0 20px;
   font-size: 16px;
-  color: #333;
+  color: #666;
   cursor: pointer;
   &.left {
     float: left;
@@ -45,6 +50,9 @@ export const NavItem = styled.div`
   }
   &.register {
     display: none;
+  }
+  &:hover {
+    color: black;
   }
   .ant-menu-horizontal > .ant-menu-submenu-selected {
     border-bottom: none;

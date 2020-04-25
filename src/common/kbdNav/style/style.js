@@ -4,32 +4,29 @@ export const KbdNavWrapper = styled.div`
   position: relative;
   margin: 0;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 240px;
-  min-width:630px;
+  min-width: 630px;
   box-shadow: 0 0 4px 0 #ccc;
-  background: #fffcf1;
+  background: linear-gradient(to right, #fff8f8 0%, #fffeef 50%,#fbfdff 70%, #f5f4f9 100%);
+  display: inline-block;
+  padding: 0 10px;
 `;
 
 export const KbdNavdesc = styled.div`
-  position: absolute;
-  top: 10px;
-  left: 67px;
   font-size: 14px;
   line-height: 21px;
   h1 {
-    margin-bottom: 4px;
+    margin: 5px 0;
     font-size: 18px;
+  }
+  p {
+    color: #555;
   }
 `;
 
 export const KbdNav = styled.div`
   display: inline-block;
-  background: rgba(255,255,255,0.7);
   border-radius: 10px;
-  margin-top: 32px;
+  margin-bottom: 18px;
   kbd{
     display: inline-block;
     border: 1px solid red;
@@ -53,8 +50,8 @@ export const KbdNav = styled.div`
     display: inline-block;
   }
   kbd>button:hover{
-    background: rgb(238, 152, 24);
-    color:#fff;
+    background: rgb(237, 172, 226);
+    color: #eee;
   }
   &>div:nth-child(2){
     margin-left: -30px;
@@ -63,36 +60,24 @@ export const KbdNav = styled.div`
   &>div:nth-child(3){
     margin-left: -112px;
   }
-  /*美化按键*/
-  .kbd{
-    margin: 0;
-    padding: 0;
-    border:0;
-    width: 51px;
-    height: 36px;
 
-    /*线性渐变:0-70白色,70-100,fff-f3f3f3渐变*/
-    background: linear-gradient(to bottom,#fffcfc 0%,#fffcfc 70%, #fafafa 100%);
+  .kbd{
+    margin: 4px;
+    padding: 0;
+    border: 1px solid #ccc;
+    width: 51px;
+    height: 39px;
+
+    background: linear-gradient(to bottom,#fff 0%,#fff1ff 40%,#fffcfc 100%);
     border-radius: 7px;
 
-    box-shadow: 0 5px 0 0 #767d81;
+    box-shadow: 0 6px 1px 0 #767d81;
     color: #767D81;
     font-family: Helvetical;
 
 
     vertical-align: top;
     position: relative;
-  }
-  .kbd_wrapper{
-    display: inline-block;
-    vertical-align: top;
-
-    width: 51px;
-    height: 41px;
-    border-radius: 7px;
-    margin: 0 5px;
-
-    box-shadow: 0 4px 3px 0 #3C3C3D,0 0 1px 0 #3C3C3D;
   }
   &>div{
     margin: 10px 0;
@@ -110,23 +95,5 @@ export const KbdNav = styled.div`
     left: 7px;
     top: 4px;
   }
-  .kbd_wrapper:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  }
-  
-  @keyframes shake{
-    10%, 90% {
-        transform: translate3d(-1px, 0, 0);
-    }
-    20%, 80% {
-        transform: translate3d(2px, 0, 0);
-    }
-    
-    30%, 50%, 70% {
-        transform: translate3d(-4px, 0, 0);
-    }
-    40%, 60% {
-        transform: translate3d(4px, 0, 0);
-    }
-  }
 `;
+

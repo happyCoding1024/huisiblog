@@ -8,7 +8,9 @@ const defaultState = fromJS({
   list: [],
   mouseIn: false,
   page: 1,
-  totalPage: 1
+  totalPage: 1,
+  focusStatus: false,
+  inputElem_header: ''
 });
 const reducer = (state=defaultState, action) => {
   switch(action.type) {
@@ -34,6 +36,12 @@ const reducer = (state=defaultState, action) => {
       return state.set('mouseIn', true);
     case actionTypes.MOUSE_LEAVE:
       return state.set('mouseIn', false); 
+    case actionTypes.CHANGE_FOCUS_TRUE:
+      return state.set('focusStatus', true);
+    case actionTypes.CHANGE_FOCUS_FALSE:
+      return state.set('focusStatus', false);
+    case actionTypes.CHANGE_INPUT_ELEM:
+      return state.set('inputElem_header', action.inputElem_header);
     default: 
       return state;
   }

@@ -2,7 +2,9 @@ import { fromJS } from 'immutable';
 import * as actionTypes from './actionTypes'; 
 
 const defaultState = fromJS({
-  registerStatus: false
+  registerStatus: false,
+  regAccountElem: '',
+  regPassElem: ''
 });
 
 const reducer = (state=defaultState, action) => {
@@ -14,6 +16,11 @@ const reducer = (state=defaultState, action) => {
       } else {
         return state.set('registerStatus', false);        
       }
+    case actionTypes.CHANGE_REG_INPUT_ELEM:
+      return state.merge({
+        regAccountElem: action.accountInputElem,
+        regPassElem: action.passInputElem
+      })
     default: 
       return state;
   }

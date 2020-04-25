@@ -1,42 +1,58 @@
 import styled  from 'styled-components';
 
-export const RegisterWrapper = styled.div`
-  z-index: 0;
+// 利用 absolute 填垂直方向的空间
+export const Container = styled.div`
+  background-image: linear-gradient(to right, #f3e7e9, #e3eeff);  
+  padding: 40px;
   position: absolute;
+  top: 52px;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  top: 56px;
-  background: #eee;
+}
+`;
+
+export const RegisterWrapper = styled.div`
+  background-color: #fff;
+  width: 276px;
+  height: 460px;
+  border-radius: 15px;
+  padding: 0 20px;
+  position: relative;
+  margin: 0 auto;
+`;
+
+export const RegisterHeader = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 200px;
 `;
 
 export const RegisterBox = styled.div`
-  width: 400px;
-  height: 220px;
-  margin: 80px auto;
-  background: #fff;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .1);
-  padding-top: 20px;
+;
 `;
 
 export const Input = styled.input`
   display: block;
-  width: 200px;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 10px;
-  color: #777;
-  margin: 10px auto;
+  width: 235px;
+  margin-bottom: 20px;
+  border: 0;
+  padding: 10px;
+  border-bottom: 1px solid rgb(128, 125, 125);
+  font-size: 15px;
+  outline: none;
+  &::placeholder {
+    text-transform: uppercase;   
+  }
 `;
 
 export const Button = styled.div`
-  width: 200px;
-  height: 30px;
-  line-height: 30px;
-  color: #fff;
-  background: #3194d0;
-  border-radius: 15px;
-  margin: 15px auto;
   text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+  background-image: linear-gradient(to right, #f3e7e9, #e3eeff);
+  color: #c6c4c4;
   cursor: pointer;
+  font-weight: bold;
 `;

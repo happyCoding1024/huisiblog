@@ -32,8 +32,7 @@ class Create extends PureComponent {
           </CreateItem>
         </CreateHeader>
         <CreateBottom>
-          <div className='wait'>稍后答</div>
-          <div className='draft'>草稿箱</div>
+          <a className='live' href='https://space.bilibili.com/421338049'>b站直播前端学习，一天12小时以上，一起学习吧</a>
         </CreateBottom>
       </CreateWrapper>
     )

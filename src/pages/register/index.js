@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { actionCreators } from './store';
 import { Redirect } from 'react-router-dom';
 import {
+  Container,
+  RegisterHeader,
   RegisterWrapper,
   RegisterBox,
   Input,
@@ -14,17 +16,24 @@ class Register extends PureComponent {
     const { registerStatus } = this.props;
     if (!registerStatus) {
       return (
-        <RegisterWrapper>
-          <RegisterBox>
-            <Input placeholder='账号' ref={(input) => {this.account=input}} autofocus/>
-            <Input placeholder='密码' type='password' ref={(input) => {this.password=input}}/>
-            <Button onClick={() => {this.props.register(this.account, this.password)}}>注册</Button>
-          </RegisterBox>
-        </RegisterWrapper> 
+        <Container>
+          <RegisterWrapper>
+            <RegisterHeader>register</RegisterHeader>
+            <RegisterBox>
+              <Input placeholder='username' ref={(input) => {this.account=input}} autofocus/>
+              <Input placeholder='password' type='password' ref={(input) => {this.password=input}}/>
+              <Button onClick={() => {this.props.register(this.account, this.password)}}>sign up</Button>
+            </RegisterBox>
+          </RegisterWrapper> 
+        </Container>
       )
     } else {
       return <Redirect to='/' />
     }
+  }
+
+  componentDidMount() {
+    this.props.changeInputElem(this.account, this.password)
   }
 }
 
@@ -35,7 +44,10 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   register(accountElem, passwordElem) {
     dispatch(actionCreators.register(accountElem.value, passwordElem.value));
-  }
+  },
+  changeInputElem(accountInputElem, passInputElem) {
+    dispatch(actionCreators.changeInputElem(accountInputElem, passInputElem))
+  }  
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Register);

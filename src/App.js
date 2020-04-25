@@ -14,10 +14,11 @@ import Write from './pages/write';
 import './style.js';
 
 class App extends Component {
+  
   render() {
     return (
       <Provider store={store}>
-        <Fragment>
+        <Fragment >
           <GlobalResetStyle />
           <GlobalIconfontStyle />
           <BrowserRouter>

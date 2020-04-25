@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const HomeWrapper = styled.div`
-  width: 960px;
-  margin: 0 auto;
+  width: 1190px;
+  margin: 52px auto 0;
   background: rgb(255, 252, 252);
-  box-shadow:0 0  4px 0 #eee;
   &::after {
     content: '';
     clear: both;
@@ -16,31 +15,34 @@ export const HomeWrapper = styled.div`
 
 export const HomeLeft = styled.div`
   float: left;
-  width: 625px;
-  margin-left: 13px;
+  width: 800px;
+  margin-left: 10px;
   margin-top: 20px;
   .KdbNav {
     width: 625px;
     height: 240px;
     vertical-align: bottom;
+    background: url('https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191222135037%E5%A4%B4%E5%83%8F.jpg');
   }
 `;
 
 export const HomeRight = styled.div`
-  width: 300px;
-  margin: 20px 5px 0 0;
+  width: 310px;
+  margin: 20px 16px 0 0;
   float: right;
   .ant-picker-calendar {
     background: #fffcfc;
     border-radius: 4px;
     box-shadow: 0 0 5px 0 #ccc;
     margin-top: 5px;
+    background-image: linear-gradient(to right, #fff8f8 0%, #fffeef 50%,#fbfdff 70%, #f5f4f9 100%);
   }
   .ant-picker-body {
     background: #fffcfc;
+    background-image: linear-gradient(to right, #fff8f8 0%, #fffeef 50%,#fbfdff 70%, #f5f4f9 100%);    
   }
   .CarouselImg {
-    width: 300px;
+    width: 310px;
     height: 200px;
     border-radius: 10px;
     margin: 10px 0;
@@ -53,6 +55,9 @@ export const TopicWrapper = styled.div`
   padding: 6px 0 10px 0;
   overflow: hidden;
   box-shadow: 0 0 4px 0 #ccc;
+  margin: 12px 0;
+  background-image: linear-gradient(to right,#fffcfc,#f4ccff);
+  border-radius: 10px;
   h1 {
     font-size: 18px;
     font-weight: bold;
@@ -79,9 +84,14 @@ export const TopicItem = styled.div`
 
 // List组件
 export const ListItem = styled.div`
-  padding: 20px 0;
+  padding: 20px 10px;
   overflow: hidden;
   border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 0 4px 0 #ccc;
+  background-image: linear-gradient(to right,#fffcfc, #f0f5fd);
+  margin: 4px 0;
+  height: 136px;
+  border-radius: 10px;
   .listImg {
     float: right;
     width: 125px;
@@ -149,6 +159,7 @@ export const CreateWrapper = styled.div`
   overflow: hidden;
   border-radius: 6px;
   box-shadow: 0 0 4px 0 #ccc;
+  background-image: linear-gradient(to right, #fff8f8 0%, #fffeef 50%,#fbfdff 70%, #f5f4f9 100%);
 `;
 
 export const CreateHeader = styled.div`
@@ -162,6 +173,7 @@ export const CreateItem = styled.div`
   margin-left: 24px;
   padding-top: 25px;
   font-size: 15px;
+  color: #333;
   cursor: pointer;
   .iconfont {
     display: block;
@@ -181,22 +193,22 @@ export const CreateItem = styled.div`
   .thought {
     color: rgb(38, 191, 191);
   }
+  &:hover {
+    color: rgb(24, 144, 255);
+  }
 `;
 
 export const CreateBottom = styled.div`
   overflow: hidden;
-  .wait {
+  .live {
+    text-decoration: none;
+    display: block;
     cursor: pointer;
-    float: left;
-    padding: 14px 50px;
-    border-right: 1px solid #ccc;
+    padding: 14px 40px;
     text-align: center;
-  }
-  .draft {
-    cursor: pointer;
-    float: right;
-    padding: 14px 50px;
-    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+    color: #666;
   }
 `;
 
@@ -216,14 +228,16 @@ export const RecommendItem = styled.div`
 // 回到顶部组件
 export const BackTop = styled.div`
    position: fixed;
-   bottom: 40px;
-   right: 40px;
+   bottom: 10px;
+   right: 10px;
    width: 60px;
    height: 60px;
-   border: 1px solid #ccc;
+   box-shadow: 0 0 4px 0 #ccc;
    line-height: 60px;
    text-align: center;
+   background-image: linear-gradient(to right, #fff8f8 0%, #fffeef 50%,#fbfdff 70%, #f5f4f9 100%);
    cursor: pointer;
+   border-radius: 6px;
 `;
 
 // 音乐组件

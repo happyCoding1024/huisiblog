@@ -2,7 +2,9 @@ import { fromJS } from 'immutable';
 import * as actionTypes from './actionTypes'; 
 
 const defaultState = fromJS({
-  loginStatus: false
+  loginStatus: false,
+  accountInputElem: '',
+  passInputElem: ''
 });
 
 const reducer = (state=defaultState, action) => {
@@ -16,6 +18,11 @@ const reducer = (state=defaultState, action) => {
       }
     case actionTypes.LOGOUT_STATUS:
       return state.set('loginStatus', action.loginStatus);
+    case actionTypes.CHANGE_INPUT_ELEM:
+      return state.merge({
+        accountInputElem: action.accountInputElem,
+        passInputElem: action.passInputElem
+      });
     default: 
       return state;
   }

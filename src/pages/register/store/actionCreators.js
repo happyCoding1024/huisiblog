@@ -16,3 +16,9 @@ export const register = (account, password) => {
     })
   }
 };
+
+export const changeInputElem = (accountInputElem, passInputElem) => ({
+  type: actionTypes.CHANGE_REG_INPUT_ELEM,
+  accountInputElem,
+  passInputElem
+})

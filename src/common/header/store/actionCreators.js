@@ -39,3 +39,16 @@ export const getList = () => {
     });
   }
 };
+
+export const changeFocusTrue = () => ({
+  type: actionTypes.CHANGE_FOCUS_TRUE
+});
+
+export const changeFocusFalse = () => ({
+  type: actionTypes.CHANGE_FOCUS_FALSE
+});
+
+export const changeInputElem = (inputElem_header) => ({
+  type: actionTypes.CHANGE_INPUT_ELEM,
+  inputElem_header
+});

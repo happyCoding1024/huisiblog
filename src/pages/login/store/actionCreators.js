@@ -21,3 +21,9 @@ export const login = (account, password) => {
     })
   }
 };
+
+export const changeInputElem = (accountInputElem, passInputElem) => ({
+  type: actionTypes.CHANGE_INPUT_ELEM,
+  accountInputElem,
+  passInputElem
+})

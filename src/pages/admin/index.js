@@ -7,7 +7,7 @@ import Music from './components/Music';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
 import { Redirect } from 'react-router-dom';
-import KbdNav from '../../common/kbdNav/kbdNav';              
+import KbdNav from '../../common/kbdNav/keyNav';             
 import { 
   HomeWrapper,
   HomeLeft,

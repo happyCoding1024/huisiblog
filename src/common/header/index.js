@@ -19,33 +19,38 @@ import { actionCreators as loginActionCreators } from '../../pages/login/store';
 // 引入 antd 的样式文件
 import 'antd/dist/antd.css';
 import { Menu } from 'antd';
-import {  } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 class Header extends PureComponent {
   render() {
-    const { focused, mouseIn, list, logout, loginStatus, handleInputFocus, handleInputBlur, registerStatus } = this.props;
+    const { focused, mouseIn, list, logout, loginStatus, handleInputFocus, handleInputBlur, registerStatus, handleFocusStatus, handleBlurStatus } = this.props;
     const { SubMenu } = Menu;
     return (
-      <HeaderWrapper>
+      <HeaderWrapper >
         <Nav>
           <Link to='/'>
             <Logo />
           </Link>
-          <NavItem className='left'>首页</NavItem>
+          <Link to='/'>
+            <NavItem className='left'>首页</NavItem>
+          </Link>
           <NavItem className='left'>推荐</NavItem>
           {/* 注意在JSX的大括号中写的要是JS表达式，不能是JS语句 */}
           { registerStatus || loginStatus ? (
-                <NavItem className='right register'>
-                <i className="iconfont">&#xe6b3;</i>
-                <Link to='/register'>注册</Link>
-                </NavItem>
+                <Link to='/register'>
+                  <NavItem className='right register'>
+                  <i className="iconfont">&#xe6b3;</i>
+                  注册
+                  </NavItem>
+                </Link>
               )
             : (
-              <NavItem className='right'>
-              <i className="iconfont">&#xe6b3;</i>
-              <Link to='/register'>注册</Link>
-              </NavItem>
+              <Link to='/register'>
+                <NavItem className='right'>
+                  <i className="iconfont">&#xe6b3;</i>
+                  注册
+                </NavItem>
+              </Link>
             )
           } 
           <NavItem className='right'>
@@ -74,10 +79,18 @@ class Header extends PureComponent {
                 </Menu>
               )
               : 
-              <Link to='/login'>登录</Link> 
+              <Link to='/login'>
+                <NavItem>
+                  <i className="iconfont">&#xe60f;</i>
+                  登录
+                </NavItem>
+              </Link> 
             }
           </NavItem>
-            <SearchWrapper>
+            <SearchWrapper 
+              onFocus={handleFocusStatus}
+              onBlur={handleBlurStatus}
+            >
               <CSSTransition  
                 in={focused || mouseIn}
                 timeout={200}
@@ -87,7 +100,9 @@ class Header extends PureComponent {
                   className={(focused || mouseIn) ? 'focused' : ''}
                   onFocus={() => {handleInputFocus(list)}}
                   onBlur={handleInputBlur}
-                />
+                  ref={input => {this.inputElem_header = input}}
+                >
+                </ NavSearch>
               </CSSTransition>
               <i className={(focused || mouseIn) ? 'iconfont focused' : 'iconfont'}>&#xe61c;</i>
               { this.searchInfo() }
@@ -134,7 +149,14 @@ class Header extends PureComponent {
       )
     } 
   }
+
+  componentDidMount() {
+    console.log('inputElem_header = ', this.inputElem_header)
+    this.props.changeInputElem(this.inputElem_header)
+  }
+
 }
+
 
 const mapStateToProps = (state) => ({
   focused: state.getIn(['header', 'focused']), // 等价于 state.get('header').get('focused')
@@ -172,6 +194,15 @@ const mapDispatchToProps = (dispatch) => ({
   },
   logout() {
     dispatch(loginActionCreators.logoutStatus());
+  },
+  handleFocusStatus() {
+    dispatch(actionCreators.changeFocusTrue())
+  },
+  handleBlurStatus() {
+    dispatch(actionCreators.changeFocusFalse())
+  },
+  changeInputElem(inputElem_header) {
+    dispatch(actionCreators.changeInputElem(inputElem_header))
   }
 });
 

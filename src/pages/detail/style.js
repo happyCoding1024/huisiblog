@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const DetailWrapper = styled.div`
-  width: 960px;
-  margin: 20px auto 20px;
+  width: 1190px;
+  margin: 52px auto 0;
+  background: rgb(255, 252, 252);
   &::after {
     content: '';
     clear: both;
@@ -14,15 +15,33 @@ export const DetailWrapper = styled.div`
 
 export const DetailLeft = styled.div`
   float: left;
-  width: 700px;
-  height: 500px;
+  width: 800px;
+  margin-left: 10px;
+  margin-top: 20px;
 `;
 
 export const DetailRight = styled.div`
-  margin-left: 720px;
-  background: pink;
-  width: 240px; 
-  height: 500px;
+  width: 310px;
+  margin: 20px 16px 0 0;
+  float: right;
+  .ant-picker-calendar {
+    background: #fffcfc;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 #ccc;
+    margin-top: 5px;
+    background-image: linear-gradient(to right, #fff8f8 0%, #fffeef 50%,#fbfdff 70%, #f5f4f9 100%);
+  }
+  .ant-picker-body {
+    background: #fffcfc;
+    background-image: linear-gradient(to right, #fff8f8 0%, #fffeef 50%,#fbfdff 70%, #f5f4f9 100%);    
+  }
+  .CarouselImg {
+    width: 310px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 4px 0 #ccc;
+  }
 `;
 
 export const ArticleHeader = styled.div`
@@ -85,4 +104,12 @@ export const ArticleTitle = styled.div`
 
 export const Content = styled.div`
   
+`;
+
+// 音乐组件
+export const MusicWrapper = styled.div`
+  .aplayer {
+    background: #fffcfc;
+    margin-top: 10px;
+  }
 `;
