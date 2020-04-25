@@ -2,13 +2,21 @@
 
 开发过程中的学习笔记 [studyNote_React](studyNote.md)
 
+## TodoList
+
+- [ ] 点赞，评论
+- [ ] 留言
+- [ ] 阅读数统计
+- [ ] 标签分类
+- [ ] 文章分类
+- [ ] 分页显示
+- [ ] ...
+
 ## 2020年4月17日10:17:53（研究上线）
 
 **Linux系统目录**
 
 ![Linux系统目录]( https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_200417023053003-Linux的树形示意图.png)
-
-
 
 Linux 系统中没有盘符的概念，只有一个根目录 `/`，所有的文件都在它下面。
 
@@ -52,4 +60,6 @@ ln -s /usr/local/src/node-v0.10.18/bin/cnpm /usr/local/bin/cnpm
 
 ![登录页面](https://raw.githubusercontent.com/happyCoding1024/image-hosting/master/img/20200422144224.png)
 
+## 2020年4月25日（更新键盘导航组件）
 
+更新键盘导航组件至 v1.1.4 

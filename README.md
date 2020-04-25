@@ -2,7 +2,7 @@
 
 ## 介绍
 
-慧思博客_前端是学习 React 过程中做的一个简化的博客系统，后端使用 Node 编写，实现的功能前后端已经进行了联调测试。
+慧思博客_前端是学习 React 过程中做的一个简化的博客系统，后端使用 Node.js 编写，实现的功能前后端已经进行了联调测试。
 
 
 慧思博客主页(2020.04.09)
@@ -86,21 +86,26 @@
 - [x] 键盘导航
 - [x] 回到顶部
 
-## TodoList
-
-- [ ] 点赞，评论
-- [ ] 留言
-- [ ] 阅读数统计
-- [ ] 标签分类
-- [ ] 文章分类
-- [ ] 分页显示
-- [ ] ...
 
 ## UpdateLog & IssueLog
 
+记录新增的功能，修正的 bug，解决问题的方法，TodoList，开发感悟等。
+
 [updateIssueLog](doc/dev/updateIssueLog.md)
 
+## 联系作者
 
+如果您发现此项目有任何问题，希望可以抽时间告诉作者，感谢您的贡献，非常感谢。
+
+如果您感觉此项目还可以，欢迎 star 鼓励一下作者，非常感谢。
+
+联系方式：
+
+- 在 [github issues](https://github.com/happyCoding1024/huisiblog/issues) 提交问题
+
+- [博客园 codingOrange](https://www.cnblogs.com/zhangguicheng/)
+
+- [b站直播前端学习，一起来学习吧(一天12小时以上)](https://space.bilibili.com/421338049)
 
 
 
