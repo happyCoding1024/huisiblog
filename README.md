@@ -1,7 +1,7 @@
 # 慧思博客_前端
 
-<div align=center style="width: 200px height: 96px">
-  <img src="https://raw.githubusercontent.com/happyCoding1024/image-hosting/master/img/huisiBrand_Github.png"/>
+<div align=center style="width:200px height:96px">
+  <img src="https://raw.githubusercontent.com/happyCoding1024/image-hosting/master/img/huisiBrand200_Github.png"/>
 </div>
 
 ## 介绍
