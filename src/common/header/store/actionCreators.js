@@ -32,7 +32,8 @@ export const changeList = (list) => ({
 // 取得搜索框中的推荐内容
 export const getList = () => {
   return (dispatch) => {
-    axios.get('/api/header/headerList.json').then((res) => {
+    // axios.get('/api/header/headerList.json').then((res) => {
+    axios.get('http://www.baidu.com').then((res) => {
       dispatch(changeList(res.data.data));
     }).catch(() => {
       console.error('ajax fail');

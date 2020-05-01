@@ -1,11 +1,14 @@
 # 慧思博客_前端
 
+![慧思博客图标](https://raw.githubusercontent.com/happyCoding1024/image-hosting/master/img/huisiBrand_Github.png)
+
 ## 介绍
 
-慧思博客_前端是学习 React 过程中做的一个简化的博客系统，后端使用 Node.js 编写，实现的功能前后端已经进行了联调测试。
+> 慧思是给自己个人博客取的名字，代表智慧和思考。
 
+慧思博客_前端是慧思个人博客的前端部分，采用 react 技术栈编写，后端使用 Node.js 编写，实现的功能前后端已经进行了联调测试。
 
-慧思博客主页(2020.04.09)
+慧思博客主页
 
 ![慧思博客项目主页](https://raw.githubusercontent.com/happyCoding1024/image-hosting/master/img/Github慧思博客主页照片900_400.png)
 
