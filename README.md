@@ -1,6 +1,8 @@
 # 慧思博客_前端
 
-![慧思博客图标](https://raw.githubusercontent.com/happyCoding1024/image-hosting/master/img/huisiBrand_Github.png)
+<div align=center>
+  <img src="https://raw.githubusercontent.com/happyCoding1024/image-hosting/master/img/huisiBrand_Github.png"/>
+</div>
 
 ## 介绍
 
